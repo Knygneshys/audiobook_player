@@ -191,7 +191,7 @@ public class FileSelect extends AppCompatActivity implements RecyclerViewInterfa
             {
                 try {
                     Audiobook audiobook = convertFolderToAudiobookClass(file);
-                    if(!audiobookList.contains(audiobook))
+                    if(audiobook != null && !audiobookList.contains(audiobook))
                         audiobookList.add(audiobook);
                 } catch (Exception e) {
                     Toast.makeText(FileSelect.this, "Failed to convert " + file.getName(), Toast.LENGTH_LONG).show();
@@ -227,7 +227,8 @@ public class FileSelect extends AppCompatActivity implements RecyclerViewInterfa
             else
                 audioFile = file;
         }
-        audiobook = new Audiobook(dataUri, audioFile.getUri(), folder.getUri(), coverImageUri);
+        if(coverImageUri != null && dataUri != null)
+            audiobook = new Audiobook(dataUri, audioFile.getUri(), folder.getUri(), coverImageUri);
 
         return audiobook;
     }
