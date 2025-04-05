@@ -5,17 +5,18 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="@color/design_default_color_background"
+    android:background="#88304E"
+    android:backgroundTint="#88304E"
     tools:context=".AudiobookPlayerUI">
 
     <TextView
         android:id="@+id/audiobookName"
         android:layout_width="340dp"
         android:layout_height="60dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="80dp"
         android:text="Name"
         android:textAlignment="center"
+        android:textColor="#E9DFC3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,6 +26,9 @@
         android:layout_width="113dp"
         android:layout_height="57dp"
         android:layout_marginTop="24dp"
+        android:background="#88304E"
+        android:gravity="center"
+        android:popupBackground="#88304E"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/audiobookName" />
@@ -33,7 +37,7 @@
         android:id="@+id/footer"
         android:layout_width="362dp"
         android:layout_height="215dp"
-        android:background="#6F673AB7"
+        android:background="#F7374F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -44,6 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="65dp"
             android:text="10 s"
+            android:textColor="#E9DFC3"
             app:layout_constraintEnd_toStartOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/skipForward" />
 
@@ -53,6 +58,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="34dp"
             android:text="1 m"
+            android:textColor="#E9DFC3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doubleSkipForward" />
 
@@ -67,6 +73,7 @@
             android:text="◄◄"
             android:textAlignment="textEnd"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#2C2C2C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
@@ -76,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="0.00%"
+            android:textColor="#E9DFC3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -89,6 +97,7 @@
             android:layout_marginEnd="8dp"
             android:text="X:X:X"
             android:textAlignment="textStart"
+            android:textColor="#E9DFC3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/timeSlider"
@@ -112,6 +121,7 @@
             android:layout_marginEnd="8dp"
             android:text="0:0:0"
             android:textAlignment="textEnd"
+            android:textColor="#E9DFC3"
             app:layout_constraintEnd_toStartOf="@+id/timeSlider"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,6 +138,7 @@
             android:text="►►"
             android:textAlignment="textStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#2C2C2C"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
@@ -142,6 +153,7 @@
             android:text="◄"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#2C2C2C"
             app:flow_horizontalAlign="end"
             app:flow_verticalAlign="center"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -158,6 +170,7 @@
             android:text="►"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#2C2C2C"
             app:iconPadding="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/doubleSkipForward" />
@@ -168,6 +181,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="34dp"
             android:text="1 m"
+            android:textColor="#E9DFC3"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/doubleSkipBackward" />
 
@@ -177,6 +191,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="65dp"
             android:text="10 s"
+            android:textColor="#E9DFC3"
             app:layout_constraintStart_toEndOf="@+id/textView"
             app:layout_constraintTop_toBottomOf="@+id/skipBackward" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -185,12 +200,15 @@
         android:id="@+id/togglePlayPause"
         android:layout_width="288dp"
         android:layout_height="292dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#88304E"
         android:onClick="toggleState"
+        app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/speedSelector"
-        tools:srcCompat="@color/material_dynamic_tertiary10" />
+        tools:srcCompat="#88304E" />
 
     <TextView
         android:id="@+id/stateText"
@@ -199,6 +217,7 @@
         android:text="▶"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#2C2C2C"
         app:layout_constraintBottom_toBottomOf="@+id/togglePlayPause"
         app:layout_constraintEnd_toEndOf="@+id/togglePlayPause"
         app:layout_constraintStart_toStartOf="@+id/togglePlayPause"
@@ -208,8 +227,13 @@
         android:id="@+id/button2"
         android:layout_width="97dp"
         android:layout_height="54dp"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:layout_margin="0dp"
+        android:elevation="0dp"
         android:onClick="goToFileSelect"
         android:text="Back"
+        android:textColor="#E9DFC3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

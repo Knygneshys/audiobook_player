@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#522546">
 
     <androidx.cardview.widget.CardView
         android:layout_width="358dp"
@@ -11,16 +12,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="360dp"
-            android:layout_height="130dp">
+            android:layout_height="130dp"
+            android:background="#522546">
 
             <ImageView
                 android:id="@+id/bookCover"
                 android:layout_width="110dp"
                 android:layout_height="130dp"
+                android:background="#522546"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -29,12 +32,15 @@
             <TextView
                 android:id="@+id/bookTitle"
                 android:layout_width="237dp"
-                android:layout_height="130dp"
+                android:layout_height="121dp"
                 android:layout_marginStart="3dp"
+                android:background="#522546"
                 android:text="TextView"
+                android:textColor="#E9DFC3"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/bookCover"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

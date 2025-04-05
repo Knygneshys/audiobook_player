@@ -86,8 +86,8 @@ public class AudiobookPlayerUI extends AppCompatActivity implements AdapterView.
 
         findViews();
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.speed_values, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.speed_values, R.layout.spinner_item);
+        adapter.setDropDownViewResource(R.layout.spinner_item);
         spinner.setAdapter(adapter);
         //  spinner.setSelection(3);
         spinner.setOnItemSelectedListener(this);
