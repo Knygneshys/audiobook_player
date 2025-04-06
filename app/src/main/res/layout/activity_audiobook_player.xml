@@ -35,7 +35,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/footer"
-        android:layout_width="362dp"
+        android:layout_width="wrap_content"
         android:layout_height="215dp"
         android:background="#F7374F"
         app:layout_constraintBottom_toBottomOf="parent"
